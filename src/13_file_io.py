@@ -9,6 +9,27 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
+# f = open('foo.txt', 'r')
+
+# for line in f:
+#     print(line, end="")
+
+# f.close()
+
+with open("/Users/lambda_school_loaner_58/Desktop/cs18/Intro-Python-I/src/foo.txt") as f:
+    read_data = f.read()
+    print(read_data)
+
+    f.close()
+
+# with open('foo.txt') as f:
+#     read_data = f.read()
+#     print(read_data)
+# f.closed
+
+
+
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -16,3 +37,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+
+f2 = open("bar.txt", "w+")
+
+f2.write("LUKE.......SKYWALKER \n YOU'RE A WIZARD HARRY \n Aragorn..They took the little ones....")
+
+f2.close()
